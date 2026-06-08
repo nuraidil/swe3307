@@ -59,7 +59,7 @@ function emptyBox(glyph, title, sub, ctaLabel, ctaTarget){
 }
 function statusTag(state){
   const map = { active:'confirmed', expired:'completed', cancelled:'cancelled', pending:'pending' };
-  const col = { active:'#22c55e', expired:'#888', cancelled:'#ef4444', pending:'#f59e0b' };
+  const col = { active:'#2c2c2c', expired:'#888', cancelled:'#6f6f6f', pending:'#4a4a4a' };
   const label = map[state] || state;
   const color = col[state] || '#888';
   return `<span class="tag" style="color:${color};border-color:${color}33;">${label}</span>`;
@@ -269,7 +269,7 @@ function renderP2(){
       <div class="col gap10">
         <div class="row between"><span class="b6 t13">◯ Min. Capacity</span><span class="tag dark">${s.cap}</span></div>
         <input type="range" min="5" max="150" value="${s.cap}" data-change="p2cap"
-          style="width:100%;accent-color:var(--primary);cursor:pointer;margin:4px 0;" />
+          style="width:100%;accent-color:#2c2c2c;cursor:pointer;margin:4px 0;" />
         <div class="row between mono t10 muted"><span>5</span><span>150</span></div>
       </div>
       <div class="col gap10">
@@ -588,13 +588,13 @@ function renderP5(){
       </div>
       <div class="row gap8 wrap" style="margin-bottom:16px;"><span class="tag dark">${cur.event}</span>${Object.keys(cur.addons||{}).map(a=>`<span class="tag">${a}</span>`).join('')}</div>
       <div class="t12 muted" style="text-align:center;border-top:1px dashed var(--line-2);padding-top:12px;">
-        <span style="color:#ef4444;">✕ ←</span> &nbsp;Drag to decline or approve &nbsp;<span style="color:#22c55e;">→ ✓</span>
+        <span style="color:#6f6f6f;">✕ ←</span> &nbsp;Drag to decline or approve &nbsp;<span style="color:#2c2c2c;">→ ✓</span>
       </div>
     </div>
     <div class="swipe-track" style="position:relative;width:100%;max-width:480px;height:52px;background:#f0f0f0;border-radius:999px;overflow:hidden;user-select:none;cursor:grab;">
       <div class="swipe-fill" style="position:absolute;top:0;height:100%;width:0;left:0;border-radius:999px;transition:none;pointer-events:none;"></div>
-      <span class="swipe-label-decline" style="position:absolute;left:18px;top:50%;transform:translateY(-50%);font-size:12px;font-weight:700;color:#ef4444;opacity:0.3;pointer-events:none;">✕ DECLINE</span>
-      <span class="swipe-label-approve" style="position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:12px;font-weight:700;color:#22c55e;opacity:0.3;pointer-events:none;">APPROVE ✓</span>
+      <span class="swipe-label-decline" style="position:absolute;left:18px;top:50%;transform:translateY(-50%);font-size:12px;font-weight:700;color:#6f6f6f;opacity:0.3;pointer-events:none;">✕ DECLINE</span>
+      <span class="swipe-label-approve" style="position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:12px;font-weight:700;color:#2c2c2c;opacity:0.3;pointer-events:none;">APPROVE ✓</span>
       <div class="swipe-thumb" style="position:absolute;top:4px;left:calc(50% - 22px);width:44px;height:44px;border-radius:50%;background:#ccc;box-shadow:0 2px 8px rgba(0,0,0,0.18);display:flex;align-items:center;justify-content:center;cursor:grab;transition:none;">
         <span class="swipe-thumb-icon" style="font-size:18px;color:#fff;pointer-events:none;">⇔</span>
       </div>
