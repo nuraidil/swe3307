@@ -7,7 +7,7 @@ const WF = {
   authTab: 'login',
   adminReturn: 'dashboard',
   is24h: false,
-  selectedRoom: 'DK5 Lecture Hall',
+  selectedRoom: 'Room1',
   damage: false,            // 'open' | 'submitted' | false
   p2: { cap: 30, events: ['Workshop'], facilities: ['Projector','WiFi'], floor: 'Any Floor' },
   p3: { addons: {}, day: 'Mon', start: '09:00', end: '11:00', email: true },
@@ -27,7 +27,7 @@ const WF = {
 window.WF = WF;
 
 /* ---------- date / time helpers ---------- */
-const DAY_DATES = { Mon:'9 Jun 2026', Tue:'10 Jun 2026', Wed:'11 Jun 2026', Thu:'12 Jun 2026', Fri:'13 Jun 2026' };
+const DAY_DATES = { Mon:'9 Jan 2026', Tue:'10 Jan 2026', Wed:'11 Jan 2026', Thu:'12 Jan 2026', Fri:'13 Jan 2026' };
 const TIME_OPTS = ['08:00','09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00'];
 function dateLabel(day){ return `${day}, ${DAY_DATES[day]}`; }
 function durHrs(start,end){ return (parseInt(end)-parseInt(start)); }
